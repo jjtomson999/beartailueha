@@ -1,0 +1,283 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* 全称セレクタここまで */
+/* 共通部分 */
+a{
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+/* 共通部分ここまで */
+body{
+  min-height: 100vh;
+}
+.container{
+  padding: 0 50px;
+  border-radius: 1px solid black;
+}
+/* headerここから */
+header{
+  width: 86%;
+  margin: 32px auto 0 auto;
+  background: pink;
+  text-align: center;
+  padding: 28px;
+  position: relative;
+  background-image: url('./images/bgimg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header h1{
+  position: absolute;
+  color: #ffff;
+  top: 20%;
+  left: 40%;
+  z-index: 100;
+}
+nav ul{
+  display: flex;
+  justify-content: center;
+  margin-top:20px;
+  text-align: center;
+}
+@media screen and (max-width:600px) {
+  nav ul {
+    flex-direction: column;
+  }
+}
+nav ul li a{
+  border: 5px solid black;
+  width: 150px;
+  margin: 0 auto;
+  text-align: center;
+  opacity: 0.8;
+  height: 50px;
+  line-height: 50px;
+  transition:all 2.4s;
+
+}
+nav ul li{
+  padding: 16px;
+ 
+
+}
+nav ul li:hover a{
+  opacity: 1;
+  background-color: #000;
+  color: white;
+}
+@media screen and (max-width:600px) {
+  header h1{
+    font-size: 14px;
+    font-weight: 200;
+    left: 20%;
+  }
+}
+header img{
+  max-width: 100%;
+  clip-path:polygon(0% 0,90% 10%, 90% 100%,0 100%);
+}
+header h1{
+  font-size: 20px;
+  animation-name:color-change;
+  animation-delay: 1s;
+  animation-duration: 2.8s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-iteration-count: 1;
+  
+}
+@keyframes color-change{
+  0%{
+    opacity: 0;
+    transform: scale(1);
+  }
+
+  100%{
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+/* header ここまで */
+main{
+
+  /* width: 80%; */
+  margin: 0 auto;
+}
+section{
+  text-align: center;
+  width: 100%;
+  margin: 120px auto 0 auto;
+}
+/* 共通セクションここまで */
+section:nth-child(1){
+  text-align: center;
+  padding: 64px;
+  background: #eeef;
+}
+section:nth-child(1) h1{
+  font-size: 28px;
+  line-height: 40px;
+}
+/* プロフィール部分ここから */
+.prof_menu{
+ text-align: center;
+ margin-top: 100px;
+}
+/* プロフィール部分ここまで */
+.prof_menu p{
+  font-size: 25px;
+  line-height: 1.7;
+}
+.prof_menu img{
+  border: 3px solid black;
+  height: 200px;
+  border-radius:50%;
+  padding: 8px;
+}
+.prof_menu p{
+  font-size: 25px;
+}
+section:nth-child(1) ol{
+  border: 2px solid black;
+  padding-bottom: 24px;
+}
+section:nth-child(1) ol li{
+  list-style: inside;
+  list-style-type:decimal;
+  margin-top: 12px;
+  padding-top: 12px;
+  font-size: 20px;
+}
+  .prof_img{
+   border: 3px solid black;
+   border-radius:50%;
+   width: 200px;
+   height: 200px;
+   margin: 0 auto;
+   display: flex;
+
+   align-items: center;
+   justify-content: center;
+   position: relative;
+  }
+
+
+
+
+/* ここからセクション2　画像 slide*/
+section:nth-child(2){
+  width: 100%;
+  
+}
+#banners h2{
+  font-size: 32px;
+  border-bottom: 8px dotted purple;
+}
+
+/* swiperの設定 */
+.swiper{
+  height: 40vw;
+  width: 100%;
+  min-height: 700px;
+ 
+}
+
+.swiper-pagination-bullet {
+  background-color: red;
+  height: 30px;
+  width: 30px;
+}
+.swiper-slide img{
+  align-self: center;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  cursor: pointer;
+  transition: transform .4s;
+}
+.swiper img:hover{
+  transform: scale(1.08);
+}
+
+section:nth-child(2) .img_cmt{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  background: rgb(232, 226, 226);
+
+}
+section:nth-child(2) .img_cmt div{
+  margin: 0 auto;
+
+}
+.desc ul li{
+  list-style-type:none;
+  font-weight: bold;
+  font-size: 24px;
+  margin-top: 22px;
+}
+
+
+
+/* ここまでセクション2 */
+section:nth-child(3){
+  padding: 32px;
+}
+section:nth-child(3) h2{
+  font-size: 32px;
+  
+}
+
+.inner dt{
+  font-weight: bold;
+  text-align:center;
+  
+}
+.inner{
+  
+  background-image: linear-gradient(rgb(198, 235, 135), #6b6b9c);
+  clip-path: polygon(0 0, 100% 10%,100% 80%, 0% 70%);
+  padding: 24px;
+  height: 380px;
+  padding: 24px;
+  font-size: 24px;
+  width: 86%;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.inner dd{
+  border-bottom: 3px solid white;
+  width: 40%;
+  margin: 0 auto;
+  white-space: nowrap;
+}
+
+
+section:nth-child(3) .right p{
+  white-space:nowrap;
+  padding-top: 12px;
+}
+#detail{
+  font-size: 32px;
+}
+@media screen and (max-width:715px) {
+  #detail{
+    font-size: 16px;
+  }
+  .inner dd{
+    border:none;
+  }
+}
+
+footer{
+font-size: 12px;
+text-align: center;
+}
