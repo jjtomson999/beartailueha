@@ -33,9 +33,7 @@ header{
   text-align: center;
   padding: 28px;
   position: relative;
-  background-image: url('./images/adobe.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
+
 }
 
 header h1{
@@ -209,27 +207,19 @@ section:nth-child(2){
 
   max-width: 100%;
   min-height: 100%;
-
-  display: flex;
+  align-self: center;
+  display: grid;
   gap: 10px;
   
 }
 
-.swiper-pagination-bullet {
-  background-color: red;
-  height: 30px;
-  width: 30px;
-}
 .swiper-slide{
   max-width: 100%;
-  min-height:600px;
   border-bottom: 1px solid black;
 }
 .swiper-slide img{
-  align-self: center;
-  width: 100%;
   height: auto;
-  transition: all .4s;
+  width: 100%;
  
 }
 .swiper img:hover{
@@ -253,6 +243,9 @@ section:nth-child(2).img_cmt{
 section:nth-child(2) .img_cmt div{
   margin: 0 auto;
 
+}
+.desc ul{
+  margin-top: 100px;
 }
 .desc ul li{
   list-style-type:none;

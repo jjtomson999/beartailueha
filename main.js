@@ -1,12 +1,16 @@
 
 const mySwiper = new Swiper(".swiper", {
+  pagination:{
+    el:".swiper-pagination",
+    clickable:true,
+  },
   navigation: {
-      nextEl: "swiper-button-next",
+      nextEl: ".swiper-button-next",
  
-      prevEl: "swiper-button-prev",
+      prevEl: ".swiper-button-prev",
   },
   // スライドの表示枚数：600px未満の場合
-  slidesPerView: 2,
+  slidesPerView: 1,
   breakpoints: {
     // スライドの表示枚数：600px以上の場合
     800: {
@@ -25,7 +29,7 @@ const mySwiper = new Swiper(".swiper", {
   
   loop: true,
   autoHeight: true ,
-  speed:3000,
+  speed:1000,
   autoplay: {
     delay: 1000,
     stopOnLastSlide: false,
