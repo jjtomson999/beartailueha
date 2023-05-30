@@ -21,8 +21,9 @@ body{
   background: lemonchiffon;
 }
 .container{
-  padding: 0 50px;
+  padding: 0 30px;
   border-radius: 1px solid black;
+  max-width: 1300px;
 }
 /* headerここから */
 header{
@@ -31,9 +32,10 @@ header{
   margin: 32px auto 0 auto;
   background: pink;
   text-align: center;
-  padding: 28px;
+ 
   position: relative;
-
+  /* background-image: url('./images/headerbanner.png');
+  background-repeat: no-repeat; */
 }
 
 header h1{
@@ -43,6 +45,7 @@ header h1{
   left: 30%;
   z-index: 100;
 }
+
 nav{
   width: 80%;
   margin: 0 auto;
@@ -52,8 +55,6 @@ nav ul{
   justify-content: center;
   margin-top:20px;
   text-align: center;
-  
-  
 }
 @media screen and (max-width:600px) {
   nav ul {
@@ -114,6 +115,13 @@ header h1{
   }
 }
 /* header ここまで */
+#mainvisual{
+  width: 100%;
+  text-align: center;
+}
+#mainvisual img{
+  max-width: 100%;
+}
 main{
 
   /* width: 80%; */
@@ -209,13 +217,14 @@ section:nth-child(2){
   min-height: 100%;
   align-self: center;
   display: grid;
-  gap: 10px;
+  
   
 }
 
 .swiper-slide{
   max-width: 100%;
-  border-bottom: 1px solid black;
+  height: auto;
+ 
 }
 .swiper-slide img{
   height: auto;
@@ -227,6 +236,13 @@ section:nth-child(2){
   cursor: grab;
   box-shadow:1px -4px 13px 3px black;
   margin-top: 24px;
+}
+div.btn-menu{
+  width: 60px;
+  height: 10px;
+  font-weight: bold;
+  border: 10px solid white;
+  
 }
 
 /* swiperここまで */
@@ -245,7 +261,7 @@ section:nth-child(2) .img_cmt div{
 
 }
 .desc ul{
-  margin-top: 100px;
+  margin-top: 30px;
 }
 .desc ul li{
   list-style-type:none;
@@ -256,7 +272,7 @@ section:nth-child(2) .img_cmt div{
   line-height:1.7;
 }
 .desc ul li:nth-child(1){
-  margin-top: 22px;
+  margin-top: 12px;
 }
 @media screen and (max-width:900px) {
   .desc ul li{
