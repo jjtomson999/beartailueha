@@ -5,12 +5,16 @@
 }
 /* 全称セレクタここまで */
 /* 共通部分 */
+body{
+  min-height: 100vh;
+}
 a{
   display: block;
   text-decoration: none;
   color: black;
   font-size: 18px;
 }
+
 /* 共通部分ここまで */
 body{
   min-height: 100vh;
@@ -22,23 +26,23 @@ body{
 }
 /* headerここから */
 header{
-  width: 86%;
+  height: 200px;
+  width: 100%;
   margin: 32px auto 0 auto;
   background: pink;
   text-align: center;
   padding: 28px;
   position: relative;
-  background-image: url('./images/bgimg.jpg');
+  background-image: url('./images/adobe.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
-  background-color: gold;
+  background-position: center;
 }
 
 header h1{
   position: absolute;
   color: #ffff;
-  top: 20%;
-  left: 40%;
+  top: 66%;
+  left: 30%;
   z-index: 100;
 }
 nav{
@@ -116,7 +120,7 @@ main{
 
   /* width: 80%; */
   margin: 0 auto;
-  border-top: 10px dotted black;
+  /* border-top: 10px solid black; */
 }
 section{
   text-align: center;
@@ -146,7 +150,7 @@ section:nth-child(1) h1{
 .prof_menu .cmt ol li{
   font-size: 24px;
   line-height: 1.7;
-  list-style:inside;
+  list-style:none;
 }
 .prof_menu .cmt ol li:nth-child(1){
   padding-top: 12px;
@@ -173,6 +177,7 @@ section:nth-child(1) ol li{
 }
   .prof_img{
    border: 3px solid black;
+
    border-radius:50%;
    width: 200px;
    height: 200px;
@@ -194,17 +199,20 @@ section:nth-child(2){
 }
 #banners h2{
   font-size: 32px;
-  border-bottom: 8px dotted purple;
+  /* border-bottom: 8px dotted purple; */
   background: linear-gradient(90deg, #d7d36a, #86d491 60%, #FFCC70);
 
 }
 
 /* swiperの設定 */
 .swiper{
-  height: 40vw;
-  width: 100%;
-  min-height: 700px;
- 
+
+  max-width: 100%;
+  min-height: 100%;
+
+  display: flex;
+  gap: 10px;
+  
 }
 
 .swiper-pagination-bullet {
@@ -212,20 +220,27 @@ section:nth-child(2){
   height: 30px;
   width: 30px;
 }
+.swiper-slide{
+  max-width: 100%;
+  min-height:600px;
+  border-bottom: 1px solid black;
+}
 .swiper-slide img{
   align-self: center;
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  cursor: pointer;
+  width: 100%;
+  height: auto;
   transition: all .4s;
+ 
 }
 .swiper img:hover{
-  transform: scale(1.08);
+  transform: scale(1.1);
   cursor: grab;
+  box-shadow:1px -4px 13px 3px black;
+  margin-top: 24px;
 }
+
 /* swiperここまで */
-section:nth-child(2) .img_cmt{
+section:nth-child(2).img_cmt{
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -242,13 +257,18 @@ section:nth-child(2) .img_cmt div{
 .desc ul li{
   list-style-type:none;
   font-weight: bold;
-  font-size: 24px;
-  margin-top: 18px;
+  font-size: 18px;
+
   white-space: nowrap;
+  line-height:1.7;
 }
-@media screen and (max-width:400px) {
+.desc ul li:nth-child(1){
+  margin-top: 22px;
+}
+@media screen and (max-width:900px) {
   .desc ul li{
-    font-size: 12px;
+    font-size: 18px;
+    letter-spacing: 0cap;
   }
 }
 
@@ -280,7 +300,8 @@ section:nth-child(3) h2{
   line-height: 1.6;
 }
 .inner dd{
-  border-bottom: 3px solid white;
+  border-bottom: 3px solid;
+  border-color:#fff;
   width: 40%;
   margin: 0 auto;
 
