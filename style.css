@@ -119,10 +119,7 @@ header h1{
   max-width: 100%;
 }
 main{
-
-  /* width: 80%; */
   margin: 0 auto;
-  /* border-top: 10px solid black; */
 }
 section{
   text-align: center;
@@ -179,13 +176,11 @@ section:nth-child(1) ol li{
 }
   .prof_img{
    border: 3px solid black;
-
    border-radius:50%;
    width: 200px;
    height: 200px;
    margin: 0 auto;
    display: flex;
-
    align-items: center;
    justify-content: center;
    position: relative;
@@ -213,8 +208,6 @@ section:nth-child(2){
   min-height: 100%;
   align-self: center;
   display: grid;
-  
-  
 }
 
 .swiper-slide{
@@ -225,10 +218,10 @@ section:nth-child(2){
 .swiper-slide img{
   height: auto;
   width: 100%;
- 
+  transition: transform 2s;
 }
 .swiper img:hover{
-  transform: scale(1.1);
+  transform: scale(1.05);
   cursor: grab;
   box-shadow:1px -4px 13px 3px black;
   margin-top: 24px;
@@ -263,7 +256,6 @@ section:nth-child(2) .img_cmt div{
   list-style-type:none;
   font-weight: bold;
   font-size: 18px;
-  
   white-space: nowrap;
   line-height:1.7;
 }
